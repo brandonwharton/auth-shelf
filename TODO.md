@@ -18,15 +18,15 @@ Get Route
     - [x] shelf reducer
         - [x] initial state = []
         - [x] 'SET_SHELF' saves array state data
-- [ ] Router
+- [x] Router
     - [x] GET from item table
-    - [ ] make sure auth is included here
+    - [x] make sure auth is included here
 
 Delete Route
-- [ ] Client Side
-    - [ ] Delete button for each item 
-        - [ ] Payload needs to contain item's id and user_id
-        - [ ] 'REMOVE_ITEM'
+- [x] Client Side
+    - [x] Delete button for each item 
+        - [x] Payload needs to contain item's id and user_id
+        - [x] 'REMOVE_ITEM'
 - [ ] saga
     - [ ] delete.saga.js
     - [ ] listen for 'REMOVE_ITEM'
