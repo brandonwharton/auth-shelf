@@ -18,9 +18,28 @@ Get Route
     - [x] shelf reducer
         - [x] initial state = []
         - [x] 'SET_SHELF' saves array state data
-- [ ] Router
+- [x] Router
     - [x] GET from item table
-    - [ ] make sure auth is included here
+    - [x] make sure auth is included here
+
+Delete Route
+- [x] Client Side
+    - [x] Delete button for each item 
+        - [x] Payload needs to contain item's id and user_id
+        - [x] 'REMOVE_ITEM'
+- [ ] saga
+    - [ ] delete.saga.js
+    - [ ] listen for 'REMOVE_ITEM'
+    - [ ] route for '/api/shelf/${id} or something similar
+    - [ ] payload of user_id
+- [ ] shelf.router
+    - [ ] DELETE route
+        - [ ] req.params.id for the route
+        - [ ] req.body contains user_id info from client
+        - [ ] need logic to compare to req.user.id or whatever
+        
+
+
 
 
 
