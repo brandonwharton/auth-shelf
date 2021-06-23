@@ -5,16 +5,16 @@ To Dos
 Get Route
 - [ ] Client Side
     - [ ] useSelector to get our reducer data
-    - [ ] useDispatch to dispatch a FETCH to saga
+    - [x] useDispatch to dispatch a FETCH to saga
     - [ ] .map() to display data
         - [ ] Done in a ShelfItem component
-    - [ ] useEffect to GET on page load
+    - [x] useEffect to GET on page load
 - [ ] Sagas/Reducers
     - [ ] make shelf.saga.js / shelf.reducer.js
-    - [ ] shelf saga
-        - [ ] Takes 'FETCH_SHELF' action
-        - [ ] axios GET @ '/api/shelf'
-        - [ ] yields 'SET_SHELF' action
+    - [x] shelf saga
+        - [x] Takes 'FETCH_SHELF' action
+        - [x] axios GET @ '/api/shelf'
+        - [x] yields 'SET_SHELF' action
     - [ ] shelf reducer
         - [ ] initial state = []
         - [ ] 'SET_SHELF' saves array state data
