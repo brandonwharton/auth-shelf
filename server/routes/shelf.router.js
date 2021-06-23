@@ -51,7 +51,9 @@ router.post('/', rejectUnauthenticated, (req, res) => {
  * Delete an item if it's something the logged in user added
  */
 router.delete('/:id', (req, res) => {
-  // endpoint functionality
+  console.log('Delete', req.body, req.params.id);
+  res.sendStatus(200);
+  
 });
 
 /**
