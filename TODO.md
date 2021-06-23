@@ -19,7 +19,7 @@ Get Route
         - [ ] initial state = []
         - [ ] 'SET_SHELF' saves array state data
 - [ ] Router
-    - [ ] GET from item table
+    - [x] GET from item table
     - [ ] make sure auth is included here
 
 
