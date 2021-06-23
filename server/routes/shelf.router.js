@@ -34,7 +34,7 @@ router.post('/', rejectUnauthenticated, (req, res) => {
     // adding the item to the "item" table in the database
     const queryText = `INSERT INTO "item" ("description", "image_url", "user_id")
                         VALUES ($1, $2, $3)`;
-    pool.query(queryText, [req.body.description, req.body.image_url, req.user_id]).then((result) => {
+    pool.query(queryText, [req.body.description, req.body.image_url, req.user.id]).then((result) => {
       res.sendStatus(201);
     }).catch((error) => {
       console.log(error);
