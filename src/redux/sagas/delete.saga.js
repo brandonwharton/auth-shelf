@@ -6,9 +6,9 @@ function* deleteItem(action) {
     
     try {
         // console.log(action.payload);
-        yield axios.delete(`/api/shelf/${action.payload.id}&${action.payload.user_id}`)
+        yield axios.delete(`/api/shelf/${action.payload.id}`)
         // refresh DOM
-        // yield put({type: 'FETCH_SHELF'});
+        yield put({type: 'FETCH_SHELF'});
     } catch (err) {
         console.log('REMOVE_ITEM:', err)
     }
