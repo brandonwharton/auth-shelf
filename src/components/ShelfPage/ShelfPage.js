@@ -23,9 +23,11 @@ function ShelfPage() {
       <ShelfForm />
 
        {/* All GET route team changes below here*/}
-       {shelf.map(item => (
-         <ShelfItem key={item.id} item={item} />
-       ))}
+       <ul>
+        {shelf.map(item => (
+          <ShelfItem key={item.id} item={item} />
+        ))}
+       </ul>
       
     </div>
   );
