@@ -1,8 +1,7 @@
 const express = require('express');
 const pool = require('../modules/pool');
 const router = express.Router();
-const {rejectUnauthenticated} = require('../modules/authentication-middleware.js')
-
+const {rejectUnauthenticated} = require(`../modules/authentication-middleware`);
 /**
  * Get all of the items on the shelf
  */
@@ -24,8 +23,28 @@ router.get('/', rejectUnauthenticated, (req, res) => {
 /**
  * Add an item for the logged in user to the shelf
  */
-router.post('/', (req, res) => {
+router.post('/', rejectUnauthenticated, (req, res) => {
   // endpoint functionality
+  if(req.isAuthenticated()) { // only logged in users are authenticated 
+
+    console.log('is authenticated', req.isAuthenticated()); // true or false, are they logged in
+    console.log('user', req.user); // when logged in, which user is making the request
+    console.log('req.body', req.body)
+
+    // adding the item to the "item" table in the database
+    const queryText = `INSERT INTO "item" ("description", "image_url", "user_id")
+                        VALUES ($1, $2, $3)`;
+    pool.query(queryText, [req.body.description, req.body.image_url, req.user_id]).then((result) => {
+      res.sendStatus(201);
+    }).catch((error) => {
+      console.log(error);
+      res.sendStatus(500);
+    })
+  } else {
+    // if the user is not authenticated send the FORBIDDEN status (403)
+      res.sendStatus(403); 
+  }
+
 });
 
 /**
