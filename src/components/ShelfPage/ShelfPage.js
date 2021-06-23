@@ -23,8 +23,10 @@ function ShelfPage() {
       <ShelfForm />
 
        {/* All GET route team changes below here*/}
-      <p>All of the available items can be seen here.</p>
-      <ShelfItem />
+       {shelf.map(item => (
+         <ShelfItem key={item.id} item={item} />
+       ))}
+      
     </div>
   );
 }

@@ -1,7 +1,12 @@
-function ShelfItem() {
+function ShelfItem({item}) {
 
+
+    console.log('Items in ShelfItem:', item);
     return (
-        <h2>In ShelfItem</h2>
+        <>
+            <p>Item: {item.description}</p>
+            <img src={item.image_url} alt={item.description} />
+        </>
     )
 }
 

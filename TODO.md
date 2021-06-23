@@ -3,11 +3,11 @@ Order of Operations
 To Dos
 
 Get Route
-- [ ] Client Side
-    - [ ] useSelector to get our reducer data
+- [x] Client Side
+    - [x] useSelector to get our reducer data
     - [x] useDispatch to dispatch a FETCH to saga
-    - [ ] .map() to display data
-        - [ ] Done in a ShelfItem component
+    - [x] .map() to display data
+        - [x] Done in a ShelfItem component
     - [x] useEffect to GET on page load
 - [x] Sagas/Reducers
     - [x] make shelf.saga.js / shelf.reducer.js
