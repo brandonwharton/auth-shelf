@@ -9,15 +9,15 @@ Get Route
     - [ ] .map() to display data
         - [ ] Done in a ShelfItem component
     - [x] useEffect to GET on page load
-- [ ] Sagas/Reducers
-    - [ ] make shelf.saga.js / shelf.reducer.js
+- [x] Sagas/Reducers
+    - [x] make shelf.saga.js / shelf.reducer.js
     - [x] shelf saga
         - [x] Takes 'FETCH_SHELF' action
         - [x] axios GET @ '/api/shelf'
         - [x] yields 'SET_SHELF' action
-    - [ ] shelf reducer
-        - [ ] initial state = []
-        - [ ] 'SET_SHELF' saves array state data
+    - [x] shelf reducer
+        - [x] initial state = []
+        - [x] 'SET_SHELF' saves array state data
 - [ ] Router
     - [x] GET from item table
     - [ ] make sure auth is included here
