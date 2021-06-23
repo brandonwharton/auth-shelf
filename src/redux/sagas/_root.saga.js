@@ -2,11 +2,8 @@ import { all } from 'redux-saga/effects';
 import loginSaga from './login.saga';
 import registrationSaga from './registration.saga';
 import userSaga from './user.saga';
-<<<<<<< HEAD
 import postItem from '../sagas/post_item.saga';
-=======
 import shelfSaga from './shelf.saga';
->>>>>>> main
 
 // rootSaga is the primary saga.
 // It bundles up all of the other sagas so our project can use them.
