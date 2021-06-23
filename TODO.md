@@ -22,6 +22,25 @@ Get Route
     - [x] GET from item table
     - [ ] make sure auth is included here
 
+Delete Route
+- [ ] Client Side
+    - [ ] Delete button for each item 
+        - [ ] Payload needs to contain item's id and user_id
+        - [ ] 'REMOVE_ITEM'
+- [ ] saga
+    - [ ] delete.saga.js
+    - [ ] listen for 'REMOVE_ITEM'
+    - [ ] route for '/api/shelf/${id} or something similar
+    - [ ] payload of user_id
+- [ ] shelf.router
+    - [ ] DELETE route
+        - [ ] req.params.id for the route
+        - [ ] req.body contains user_id info from client
+        - [ ] need logic to compare to req.user.id or whatever
+        
+
+
+
 
 
 Post Route
